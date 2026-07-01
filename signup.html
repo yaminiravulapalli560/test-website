@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body style="margin:0; display:flex; flex-direction:column; min-height:100vh;">
+    <div id="header"></div>
+    <div style="flex:1; padding:40px; text-align:center;">
+        <h1 style="text-align:center;">Registration form</h1>
+        <form onsubmit="return validateSignup(event)">
+            <label for="first-name">First Name:</label><br>
+            <input type="text" id="first-name" value="" required minlength="3" pattern="[A-Za-z]+" title="Letters only, at least 3"><br>
+            <div id="firstNameError" style="color:red; font-size:13px;"></div>
+            <label for="last-name">Last Name:</label><br>
+            <input type="text" id="last-name" value="" required pattern="[A-Za-z]+" title="Letters only"><br>
+            <div id="lastNameError" style="color:red; font-size:13px;"></div>
+            <label for="phone-number">Phone number:</label><br>
+            <input type="tel" id="phone-number" value="" required pattern="[0-9]{10}" maxlength="10" title="Enter exactly 10 digits"><br>
+            <div id="phoneError" style="color:red; font-size:13px;"></div>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" value="" required><br>
+            <div id="emailError" style="color:red; font-size:13px;"></div>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" value="" required minlength="8"><br>
+            <div id="passwordError" style="color:red; font-size:13px;"></div>
+            <label for="confirm-password">Confirm Password:</label><br>
+            <input type="password" id="confirm-password" value="" required><br>
+            <div id="confirmPasswordError" style="color:red; font-size:13px;"></div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <div id="footer"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

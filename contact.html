@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+
+<body style="margin:0; display:flex; flex-direction:column; min-height:100vh; background:white;">
+
+    <!-- header goes here -->
+    <div id="header"></div>
+
+    <!-- page content -->
+    <div style="flex:1; padding:40px;">
+
+        <!-- grey box in the middle, two columns -->
+        <div style="max-width:1000px; margin:0 auto; background:#6e6d6d; color:white;
+                    border-radius:15px; padding:40px; display:flex; flex-wrap:wrap; gap:40px;">
+
+            <!-- left side - the form -->
+            <div style="flex:1; min-width:300px;">
+                <h1 style="margin-top:0;">Message Us</h1>
+
+                <form id="contact-form" onsubmit="return validateContact(event)">
+
+                    <!-- Name -->
+                    <label for="contact-name">Name</label><br>
+                    <input type="text" id="contact-name" required minlength="15" pattern="[A-Za-z]+" title="Letters only, at least 15"
+                        style="width:100%; padding:10px; margin:5px 0; border:1px solid white;
+                               border-radius:5px; background:transparent; color:white; box-sizing:border-box;"><br>
+                    <span id="nameError" style="color:#ff6b6b; font-size:13px;"></span><br>
+
+                    <!-- Email -->
+                    <label for="contact-email">Email</label><br>
+                    <input type="email" id="contact-email" required
+                        style="width:100%; padding:10px; margin:5px 0; border:1px solid white;
+                               border-radius:5px; background:transparent; color:white; box-sizing:border-box;"><br>
+                    <span id="emailError" style="color:#ff6b6b; font-size:13px;"></span><br>
+
+                    <!-- Phone Number -->
+                    <label for="contact-phone">Phone Number</label><br>
+                    <input type="tel" id="contact-phone" required pattern="[0-9]{10}" maxlength="10" title="Enter exactly 10 digits"
+                        style="width:100%; padding:10px; margin:5px 0; border:1px solid white;
+                               border-radius:5px; background:transparent; color:white; box-sizing:border-box;"><br>
+                    <span id="phoneError" style="color:#ff6b6b; font-size:13px;"></span><br>
+
+                    <!-- Subject -->
+                    <label for="contact-subject">Subject</label><br>
+                    <input type="text" id="contact-subject" required
+                        style="width:100%; padding:10px; margin:5px 0; border:1px solid white;
+                               border-radius:5px; background:transparent; color:white; box-sizing:border-box;"><br>
+                    <span id="subjectError" style="color:#ff6b6b; font-size:13px;"></span><br>
+
+                    <!-- Message -->
+                    <label for="contact-message">Message</label><br>
+                    <textarea id="contact-message" rows="5" required minlength="20"
+                        style="width:100%; padding:10px; margin:5px 0; border:1px solid white;
+                               border-radius:5px; background:transparent; color:white; box-sizing:border-box;"></textarea><br>
+                    <span id="messageError" style="color:#ff6b6b; font-size:13px;"></span><br>
+
+                    <!-- submit button -->
+                    <button type="submit"
+                        style="padding:12px 35px; margin-top:15px; border:none; border-radius:25px;
+                               background:white; color:#333333; font-size:16px; cursor:pointer;">
+                        Submit
+                    </button>
+
+                    <!-- success text -->
+                    <p id="successMessage" style="color:#7CFC00; margin-top:15px;"></p>
+                </form>
+            </div>
+
+            <!-- right side - office addresses -->
+            <div style="flex:1; min-width:300px;">
+                <h2 style="margin-top:0;">Our Offices</h2>
+
+                <h3>USA</h3>
+                <p>5525 N MacArthur Blvd., Suite 670,<br>Irving, TX 75038</p>
+                <hr style="border:none; border-top:1px solid #555;">
+
+                <h3>INDIA</h3>
+                <p>Plot No. 12, HITEC City,<br>Madhapur, Hyderabad, 500081</p>
+                <hr style="border:none; border-top:1px solid #555;">
+
+                <h3>CANADA</h3>
+                <p>120 King Street West,<br>Toronto, ON M5H 1T1</p>
+                <hr style="border:none; border-top:1px solid #555;">
+
+                <h3>AUSTRALIA</h3>
+                <p>20 Martin Place,<br>Sydney, NSW 2000</p>
+                <hr style="border:none; border-top:1px solid #555;">
+
+                <h3>DUBAI</h3>
+                <p>Sheikh Zayed Road,<br>Business Bay, Dubai</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer goes here -->
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
